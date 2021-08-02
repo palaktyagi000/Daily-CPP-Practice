@@ -54,12 +54,13 @@ int main(){
 
 	int key;
 	string reversal, ordering;
+	cin>>key>>reversal>>ordering;
 
 	pair<string,string> strPair[100];
 
 	for(int i=0;i<n;i++){
 		strPair[i].first = a[i];
-		strPair[i].first = extractStringAtKey(a[i], key);
+		strPair[i].second = extractStringAtKey(a[i], key);
 
 	}
 
@@ -83,7 +84,7 @@ int main(){
     //PRint the output
    
     for(int i=0;i<n;i++){
-    	cout<<strPair[i].first<<" ";
+    	cout<<strPair[i].first<<endl;
     }
 
 	return 0;
