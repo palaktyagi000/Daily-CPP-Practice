@@ -16,7 +16,7 @@ int main(){
         cout<<"Present"<<endl;
     }
     else{
-        cout<<"Absent!"<<endl;
+        cout<<"Absent!"<<endl ;
     }
 
     //Two more things
@@ -24,6 +24,7 @@ int main(){
     //lower_bound(s,e,key) and upper_bound(s,e,key)
 
     auto lb = lower_bound(arr, arr+n, 40);
+    cout<<lb<<endl;
     cout<<"Lower bound of 40 is "<<(lb-arr)<<endl;
    
     //Make a call to binary search to check if element is present or not
@@ -33,7 +34,7 @@ int main(){
   
     //upper bound
     auto ub = upper_bound(arr, arr+n, 40);
-    cout<<"Upper bound of 40 is "<<(ub-arr)<<endl;
+    cout<<"Upper bound of  40 is "<<(ub-arr)<<endl;
 
     cout<<"Occ Freq of 40 is "<<(ub-lb)<<endl;
 
