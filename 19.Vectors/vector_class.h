@@ -1,24 +1,24 @@
 
 
 
-
+template<typename T>
 class Vector{
 
 	int cs;
 	int ts;
-	int *arr;
+	T *arr;
 
 public:
 	Vector(){
 		cs = 0;
 		ts = 1;
-		arr = new int[ts];
+		arr = new T[ts];
 	}
-	void push_back(int d){
+	void push_back(const T d){
 		if(cs == ts){
 			//Array if full
-			int *oldArr = arr;
-			arr = new int[2*ts];
+			T *oldArr = arr;
+			arr = new T[2*ts];
 			ts = 2*ts;
 			for(int i=0;i<cs;i++){
 				arr[i] = oldArr[i];
@@ -35,11 +35,11 @@ public:
 		cs--;
 	}
 
-	int front() const{
+	T front() const{
 		return arr[0];
 	}
 
-	int back() const{
+	T back() const{
 		return arr[cs-1];
 	}
 
@@ -51,8 +51,12 @@ public:
 		return ts;
 	}
 
-	int at(const int i){
+	T at(const int i){
 		return arr[i];
+	}
+
+	T size() const{
+		return cs;
 	}
     
     //operator overloading
